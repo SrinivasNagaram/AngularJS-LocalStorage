@@ -1,0 +1,67 @@
+<!doctype html>
+<html ng-app="localStorage">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Angular localStorage</title> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    </head>
+<body ng-controller="storageCtrl"> 
+ <div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="app-navbar" class="nav-bar {{defaultColor}} {{applyColor}}">
+						Angular LocalStorage
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<nav class="col-md-12">
+		<div role="tabpanel" class="tab-pane fade active in" id="navbar-customizer">
+			<div class="radio radio-primary">
+				<input type="radio" name="navbar-theme" ng-model="colorName" value="primary" ng-change="colorChange(colorName)">
+				<label for="navbar-primary-theme" class="text-primary">Primary</label>
+			</div>
+			<div class="radio radio-success">
+				<input type="radio" name="navbar-theme" ng-model="colorName" value="success" ng-change="colorChange(colorName)">
+				<label for="navbar-success-theme" class="text-success">Success</label>
+			</div>
+			<div class="radio radio-danger">
+				<input type="radio" name="navbar-theme" ng-model="colorName" value="danger" ng-change="colorChange(colorName)">
+				<label for="navbar-danger-theme" class="text-danger">Danger</label>
+			</div>
+			<div class="radio radio-warning">
+				<input type="radio" name="navbar-theme" ng-model="colorName" value="warning" ng-change="colorChange(colorName)">
+				<label for="navbar-warning-theme" class="text-warning">Orange</label>
+			</div>
+			<div class="radio radio-pink">
+				<input type="radio" name="navbar-theme" ng-model="colorName" value="pink" ng-change="colorChange(colorName)">
+				<label for="navbar-pink-theme" class="text-pink">Pink</label>
+			</div>
+			<div class="radio radio-purple">
+				<input type="radio" name="navbar-theme" ng-model="colorName" value="purple" ng-change="colorChange(colorName)">
+				<label for="navbar-purple-theme" class="text-purple">Purple</label>
+			</div>
+			<div class="radio radio-inverse">
+				<input type="radio" name="navbar-theme" ng-model="colorName" value="inverse" ng-change="colorChange(colorName)">
+				<label for="navbar-inverse-theme" class="text-inverse">Inverse</label>
+			</div>
+			<div class="radio radio-dark">
+				<input type="radio" name="navbar-theme" ng-model="colorName" value="dark" ng-change="colorChange(colorName)">
+				<label for="navbar-dark-theme" class="text-dark">Dark</label>
+			</div>
+			<hr>
+			<div>
+				<button class="btn btn-primary" ng-click="resetTheme()">Reset</button>
+			</div>
+		</div>		
+	</nav>
+			</div>
+</div>   
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.2.7/angular-local-storage.js"></script> 
+<script src="app.js"></script>
+    </body>
+</html>
